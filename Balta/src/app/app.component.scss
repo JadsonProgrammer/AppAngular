@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.Balta {
+    display: inline;
+    height: 100px;
+    width: auto;
+    border: 1px solid #626262;
+    margin: 35px 35px 35px 35px;
+    padding: 30px;
+    justify-content: space-between;
+
+}
+
+ul>li {
+    height: auto;
+    display: inline;
+    width: auto;
+    margin: auto;
+}
+
+.B2 {
+    width: auto;
+    height: 200px;
+    border: 1px solid #626262;
+    position: absolute;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+ul {
+    width: auto;
+    padding: 30px;
+}
+
+button {
+    background-color: transparent !important;
+}
+
+// a,
+// abbr,
+// acronym,
+// address,
+// applet,
+// b,
+// big,
+// blockquote,
+// body,
+// caption,
+// center,
+// cite,
+// code,
+// dd,
+// del,
+// dfn,
+// div,
+// dl,
+// dt,
+// em,
+// fieldset,
+// font,
+// form,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// html,
+// i,
+// iframe,
+// img,
+// ins,
+// kbd,
+// label,
+// legend,
+// li,
+// object,
+// ol,
+// p,
+// pre,
+// q,
+// s,
+// samp,
+// small,
+// span,
+// strike,
+// strong,
+// sub,
+// sup,
+// table,
+// tbody,
+// td,
+// tfoot,
+// th,
+// thead,
+// tr,
+// tt,
+// u,
+// ul,
+// var {
+
+//     margin: 0;
+//     padding: 0;
+//     border: 0;
+//     outline: 0;
+//     font-size: 100%;
+//     vertical-align: baseline;
+//     background: rgba(255, 255, 255, 0);
+//     background-color: rgba(255, 255, 255, 0)
+// }
+
+// ol,
+// ul {
+//     list-style: none
+// }
+
+// table {
+//     border-collapse: collapse;
+//     border-spacing: 0
+// }
+
+// body,
+// form,
+// html {
+//     height: 100%
+// }
+
+// body {
+//     margin: 0;
+//     padding: 0;
+//     text-align: center;
+//     font-family: montserrat-regular, roboto-slab, Arial, sans-serif;
+//     background: #f0ece9;
+//     -webkit-font-smoothing: antialiased;
+//     -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+//     text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+// }
