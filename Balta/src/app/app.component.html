@@ -10,8 +10,27 @@
 
 
 <ul class="Balta">
-  <li class="" *ngFor="let todo of todos"> | Id: {{todo.id}} / {{todo.title}}
-    | <button>CONCLUIR</button>
-    | <button>REMOVER</button> </li>
+  <li class="" *ngFor="let todo of todos">ID: {{ todo.id}} - {{todo.title}}
+    -
+
+    <button (click)="markAsDone(todo)" *ngIf="!todo.done">CONCLUIR </button><span> </span><button
+      (click)="markAsUndone(todo)" *ngIf="todo.done">REFAZER </button>
+    <button (click)="remove(todo)"> - REMOVER</button>
+  </li>
+
 
 </ul>
+
+<form [formGroup]="form">
+  <fieldset>
+    <legend>Tarefa</legend>
+
+    <input type="text" placeholder="" maxlength="60" formControlName="title"
+      style="border: 1px solid gray; border-radius: 50px;"><br><br>
+    <small *ngIf="form.controls['title'].invalid && !form.controls['title'].pristine">Este campo deve conter entre 3 e
+      60 caracteres</small><br>
+    <button (click)="add()" [disabled]="form.invalid">Salvar</button>
+
+  </fieldset>
+  <div class=" form"></div>
+</form>

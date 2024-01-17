@@ -5,31 +5,35 @@
 }
 
 .Balta {
-    display: inline;
-    height: 100px;
+
+    height: auto;
     width: auto;
     border: 1px solid #626262;
     margin: 35px 35px 35px 35px;
     padding: 30px;
-    justify-content: space-between;
+
 
 }
 
-ul>li {
+ul>li> {
     height: auto;
-    display: inline;
+
     width: auto;
+
+
     margin: auto;
 }
 
+
+
 .B2 {
     width: auto;
-    height: 200px;
+    height: auto;
     border: 1px solid #626262;
     position: absolute;
     display: flex;
 
-    justify-content: space-between;
+
 }
 
 ul {
@@ -39,7 +43,45 @@ ul {
 
 button {
     background-color: transparent !important;
+    padding-right: 5px;
+
 }
+
+
+
+
+input:focus,
+input.form-control:focus {
+
+    outline: none;
+    outline-width: 0;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+input:focus-visible {
+    border: 2px solid #666666 !important;
+}
+
+form {
+    padding: 10px;
+    border: 2px solid #666666 !important;
+}
+
+form .form {
+    height: 200px;
+}
+
+form>fieldset>legend,
+form>fieldset>button {
+    padding: 10px 5px 5px 0px;
+}
+
+form>fieldset>small {
+    color: red;
+}
+
 
 // a,
 // abbr,
