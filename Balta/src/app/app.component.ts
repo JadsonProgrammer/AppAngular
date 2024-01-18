@@ -8,6 +8,7 @@ import { Todo } from 'src/models/todo.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public title: string = 'AjinTasks';
 
   public todos: Todo[] = [];
   public form: FormGroup;
@@ -22,41 +23,52 @@ export class AppComponent {
         Validators.required
       ])]
     });
-    this.todos.push(new Todo("Programar".toUpperCase(), true, 1));
-    this.todos.push(new Todo("Malhar".toUpperCase(), true, 2));
-    this.todos.push(new Todo("Mercado".toUpperCase(), false, 3));
-    this.todos.push(new Todo("Banho no Cachorro".toUpperCase(), false, 4));
-    this.todos.push(new Todo("Lavar roupa".toUpperCase(), false, 5));
-    this.todos.push(new Todo("Barba".toUpperCase(), true, 6));
-    this.todos.push(new Todo("Cabelo".toUpperCase(), true, 7));
-    this.todos.push(new Todo("Pano na casa".toUpperCase(), false, 8));
+    this.load();
   }
+
   remove(todo: Todo) {
     const index = this.todos.indexOf(todo);
     if (index !== -1) {
       this.todos.splice(index, 1)
+
     }
+    this.save()
 
   }
   markAsDone(todo: Todo) {
     todo.done = true;
+    this.save()
 
   }
 
   markAsUndone(todo: Todo) {
     todo.done = false;
+    this.save()
 
   }
   add() {
     const title = this.form.controls['title'].value;
     const id = this.todos.length + 1;
     this.todos.push(new Todo(title, false, id));
+    this.save()
     this.clear();
   }
   clear() {
     this.form.reset();
   }
+  save() {
 
+    const data = JSON.stringify(this.todos);
+    localStorage.setItem('todos', data);
+  }
+  load() {
+    const data = localStorage.getItem('todos');
+
+    if (!data)
+      return;
+
+    this.todos = JSON.parse(data);
+  }
 
 
 

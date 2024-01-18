@@ -1,29 +1,26 @@
-<div>
-  <h1>Componente</h1>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-</div>
+<h1>{{title}}</h1>
+<ul>
+  <fieldset>
+    <legend>Suas Tarefas</legend>
 
 
-<ul class="Balta">
-  <li class="" *ngFor="let todo of todos">ID: {{ todo.id}} - {{todo.title}}
-    -
+    <p *ngIf="todos.length==0"><small>Não tem nenhuma tarafe hoje!</small></p>
 
-    <button (click)="markAsDone(todo)" *ngIf="!todo.done">CONCLUIR </button><span> </span><button
-      (click)="markAsUndone(todo)" *ngIf="todo.done">REFAZER </button>
-    <button (click)="remove(todo)"> - REMOVER</button>
-  </li>
+    <li *ngFor="let todo of todos">{{todo.title}}
+      -
 
+      <button (click)="markAsDone(todo)" *ngIf="!todo.done">CONCLUIR </button><span> </span><button
+        (click)="markAsUndone(todo)" *ngIf="todo.done">REFAZER </button>
+      <button (click)="remove(todo)"> - REMOVER</button>
+    </li>
 
+  </fieldset>
 </ul>
 
 <form [formGroup]="form">
   <fieldset>
-    <legend>Tarefa</legend>
+    <legend>Adicionar Tarefa</legend>
+
 
     <input type="text" placeholder="" maxlength="60" formControlName="title"
       style="border: 1px solid gray; border-radius: 50px;"><br><br>
