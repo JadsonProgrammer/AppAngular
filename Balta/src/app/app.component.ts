@@ -9,13 +9,11 @@ import { Todo } from 'src/models/todo.model';
 })
 export class AppComponent {
   public title: string = 'AjinTasks';
-
+  public mode: string = 'list'
   public todos: Todo[] = [];
   public form: FormGroup;
 
-
   constructor(private fb: FormBuilder) {
-
     this.form = this.fb.group({
       title: ['', Validators.compose([
         Validators.minLength(3),
@@ -24,6 +22,9 @@ export class AppComponent {
       ])]
     });
     this.load();
+  }
+  changeMode(mode: string) {
+    this.mode = mode;
   }
 
   remove(todo: Todo) {
@@ -60,6 +61,7 @@ export class AppComponent {
 
     const data = JSON.stringify(this.todos);
     localStorage.setItem('todos', data);
+    this.mode = 'list';
   }
   load() {
     const data = localStorage.getItem('todos');
