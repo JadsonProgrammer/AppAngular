@@ -38,14 +38,4 @@ export class DataBindingComponent {
   onMouseOverOut() {
     this.isMouseOver = !this.isMouseOver;
   }
-
-  constructor() {
-
-
-  }
-  ngOnInit() {
-
-
-  }
-
 }
