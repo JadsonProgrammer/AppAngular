@@ -74,6 +74,7 @@ dist/
 .angular/
 .angular/cache/16.2.11
 
+.angular/cache
 */.idea/workspace.xml
 
 bower_components/
