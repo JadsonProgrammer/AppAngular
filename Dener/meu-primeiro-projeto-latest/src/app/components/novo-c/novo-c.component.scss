@@ -1,0 +1,12 @@
+:host {
+    h2 {
+        background: blue;
+    }
+}
+
+:host-context(theme-red) {
+    h2 {
+        background: black;
+        color: aliceblue;
+    }
+}
