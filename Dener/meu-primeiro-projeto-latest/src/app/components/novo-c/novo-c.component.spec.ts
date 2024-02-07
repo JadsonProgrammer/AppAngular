@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NovoCComponent } from './novo-c.component';
+import { NovoComponent } from './novo-c.component';
 
 describe('NovoCComponent', () => {
-  let component: NovoCComponent;
-  let fixture: ComponentFixture<NovoCComponent>;
+  let component: NovoComponent;
+  let fixture: ComponentFixture<NovoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NovoCComponent]
+      imports: [NovoComponent]
     })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(NovoCComponent);
+      .compileComponents();
+
+    fixture = TestBed.createComponent(NovoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
